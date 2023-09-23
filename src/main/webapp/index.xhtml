@@ -8,5 +8,30 @@
 <h:head></h:head> 
 <body> 
 
+<h:form>
+    <div class="card">
+        <p:dataTable var="movie" value="#{movieBean.movies}" rows="10"
+                     paginator="true" paginatorPosition="both"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                     rowsPerPageTemplate="5,10,{ShowAll|'All'}">
+            <p:column headerText="Code">
+                <h:outputText value="#{movie.id}" />
+            </p:column>
+
+            <p:column headerText="Title">
+                <h:outputText value="#{movie.title}" />
+            </p:column>
+
+            <p:column headerText="Year">
+                <h:outputText value="#{movie.year}" />
+            </p:column>
+
+            <p:column headerText="Director">
+                <h:outputText value="#{movie.director}" />
+            </p:column>
+        </p:dataTable>
+    </div>
+</h:form>
 </body> 
 </html>
