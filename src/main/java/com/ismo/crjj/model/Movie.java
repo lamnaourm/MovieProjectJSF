@@ -1,24 +1,50 @@
 package com.ismo.crjj.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table
 public class Movie {
 
+	@Id
 	private int id;
+	
+	@Column
 	private String title;
+	
+	@Column
 	private int year;
+	
+	@Column
 	private int runtime;
+	
+	@Column
 	private String genre1;
+	
+	@Column
 	private String genre2;
+	
+	@Column
 	private String genre3;
+	
+	@Column
 	private int rating;
+	
+	@Column
 	private String director;
+	
+	@Column
 	private String actors;
+	
+	@Column
 	private String plot;
+	
+	@Column
 	private String image;
+
 
 	public int getId() {
 		return id;
